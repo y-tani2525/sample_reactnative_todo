@@ -231,10 +231,11 @@ module.exports = function (api) {
 
 #### app/App.tsx
 ```typescript
+import { registerRootComponent } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
       <Text>Todo App</Text>
@@ -251,7 +252,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+registerRootComponent(App);
+export default App;
 ```
+
+> **必須**: `registerRootComponent` を呼ばないと `"main" has not been registered` エラーが出る。
 
 ### 5. イメージのビルド
 
@@ -441,6 +447,27 @@ docker compose up
 ```
 
 `expo install --fix` が react・react-native・typescript など関連パッケージを SDK に合ったバージョンに自動更新してくれる。
+
+---
+
+### "main" has not been registered エラー
+
+```
+"main" has not been registered. this can happen if:
+* Metro is run from wrong folder
+* AppRegistry.registerComponent wasn't called
+```
+
+**原因**: `App.tsx` で `registerRootComponent` が呼ばれていない。
+
+**対処**: `App.tsx` に `registerRootComponent` を追加する。
+
+```typescript
+import { registerRootComponent } from 'expo';
+// ...
+registerRootComponent(App);
+export default App;
+```
 
 ---
 
