@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "sample-reactnative-todo",
+    "slug": "sample-reactnative-todo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.example.sampletodo",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    }
+  }
+}
