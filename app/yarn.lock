@@ -2417,6 +2417,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"await-lock@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "await-lock@npm:2.2.2"
+  checksum: 10c0/bedf00dad44c6325a655bf3bd523ab9e1ce41023da6a8c379990c76ac1d942ac7e5301627ab84ba37917ab5247506ba429b7f6e4bf77074093f255571b9ad5ee
+  languageName: node
+  linkType: hard
+
 "axios@npm:0.21.4":
   version: 0.21.4
   resolution: "axios@npm:0.21.4"
@@ -3432,6 +3439,19 @@ __metadata:
   version: 1.0.7
   resolution: "expo-server@npm:1.0.7"
   checksum: 10c0/1baf6dfb07e8b6be737a10c898c25e7ad80575e2e371413cd6530e81d471575f9454b1e3751ed14a9a7d8671d3da1e2917e27ac5faebb50671e87b923f0b7b27
+  languageName: node
+  linkType: hard
+
+"expo-sqlite@npm:~16.0.10":
+  version: 16.0.10
+  resolution: "expo-sqlite@npm:16.0.10"
+  dependencies:
+    await-lock: "npm:^2.2.2"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/7d686aa7305071d02a914d11581c763f83cd32c0c04b6a46852c458b81f96e2cbef4178e4526450b14a8bd684be7889ed8445e06cca038005082425b2900267f
   languageName: node
   linkType: hard
 
@@ -5606,6 +5626,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-safe-area-context@npm:~5.6.0":
+  version: 5.6.2
+  resolution: "react-native-safe-area-context@npm:5.6.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/3c8df21a1dbac83116b9c9bd5d20b7c1bb7649ecef44a111af6fb6b237241f5f4d692189eec30a69f5701b857249257da3621b9e17165460a2bb71faac7b92ae
+  languageName: node
+  linkType: hard
+
 "react-native@npm:0.81.5":
   version: 0.81.5
   resolution: "react-native@npm:0.81.5"
@@ -5871,10 +5901,12 @@ __metadata:
     "@types/localtunnel": "npm:^2"
     "@types/react": "npm:~19.1.10"
     expo: "npm:~54.0.0"
+    expo-sqlite: "npm:~16.0.10"
     expo-status-bar: "npm:~3.0.9"
     localtunnel: "npm:^2.0.2"
     react: "npm:19.1.0"
     react-native: "npm:0.81.5"
+    react-native-safe-area-context: "npm:~5.6.0"
     typescript: "npm:^5.1.3"
   languageName: unknown
   linkType: soft
